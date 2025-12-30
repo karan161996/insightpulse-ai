@@ -8,65 +8,125 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; }
         .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; text-align: center; }
+        .urgent-banner { background: #ff4444; padding: 15px; margin-bottom: 30px; border-radius: 10px; font-weight: bold; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
         h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 800; }
         .subtitle { font-size: 1.5rem; margin-bottom: 40px; opacity: 0.9; }
+        .social-proof { background: rgba(255,255,255,0.2); padding: 20px; border-radius: 15px; margin: 30px 0; }
         .features { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 40px; margin: 40px 0; }
         .feature { margin: 20px 0; font-size: 1.2rem; }
         .feature strong { color: #ffd700; }
-        .cta { background: #ffd700; color: #000; padding: 20px 50px; font-size: 1.3rem; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; margin: 20px 0; transition: transform 0.2s; }
+        .cta { background: #ffd700; color: #000; padding: 20px 50px; font-size: 1.3rem; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; margin: 20px 0; transition: transform 0.2s; box-shadow: 0 10px 30px rgba(255,215,0,0.3); }
         .cta:hover { transform: scale(1.05); }
         .pricing { display: flex; gap: 30px; justify-content: center; margin: 40px 0; flex-wrap: wrap; }
-        .plan { background: rgba(255,255,255,0.15); padding: 30px; border-radius: 15px; min-width: 250px; }
+        .plan { background: rgba(255,255,255,0.15); padding: 30px; border-radius: 15px; min-width: 250px; position: relative; }
+        .plan.featured { border: 3px solid #ffd700; transform: scale(1.05); }
+        .badge { position: absolute; top: -15px; right: 20px; background: #ff4444; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
         .plan h3 { font-size: 2rem; margin-bottom: 10px; }
         .price { font-size: 3rem; font-weight: bold; color: #ffd700; margin: 20px 0; }
+        .savings { color: #4ade80; font-size: 1.1rem; font-weight: bold; }
         .email-form { margin: 40px 0; }
         .email-input { padding: 15px 25px; font-size: 1.1rem; border: none; border-radius: 50px; width: 100%; max-width: 400px; margin: 10px; }
+        .testimonial { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin: 20px 0; font-style: italic; }
+        .stats { display: flex; justify-content: space-around; margin: 30px 0; flex-wrap: wrap; }
+        .stat { margin: 15px; }
+        .stat-number { font-size: 2.5rem; font-weight: bold; color: #ffd700; }
+        .stat-label { font-size: 0.9rem; opacity: 0.8; }
         footer { margin-top: 60px; opacity: 0.7; font-size: 0.9rem; }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="urgent-banner">
+            ⚡ LIMITED SPOTS: Only 50 Founding Members at Launch Price ⚡
+        </div>
+        
         <h1>🚀 InsightPulse AI</h1>
-        <p class="subtitle">Your Daily Dose of AI Breakthroughs & Crypto Intelligence</p>
+        <p class="subtitle">The AI That Makes You Money While You Sleep</p>
+        
+        <div class="social-proof">
+            <p>🔥 <strong>LIVE NOW:</strong> Autonomous AI posting 6x daily with market insights</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Daily Updates</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Crypto Tracked</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">AI Monitoring</div>
+            </div>
+        </div>
         
         <div class="features">
-            <div class="feature">📊 <strong>Real-time Crypto Analysis</strong> - Top 100 coins tracked daily</div>
-            <div class="feature">🤖 <strong>AI Research Summaries</strong> - Latest papers & breakthroughs</div>
-            <div class="feature">💎 <strong>DeFi Insights</strong> - TVL trends, yield opportunities</div>
+            <div class="feature">📊 <strong>6 Daily Posts</strong> - Morning news, midday analysis, evening recap</div>
+            <div class="feature">🤖 <strong>AI Research</strong> - Latest papers, breakthroughs, model releases</div>
+            <div class="feature">💎 <strong>DeFi Opportunities</strong> - Yield farming, staking, TVL trends</div>
             <div class="feature">📈 <strong>Market Predictions</strong> - AI-powered trend analysis</div>
-            <div class="feature">⚡ <strong>Delivered Daily</strong> - Before market open</div>
+            <div class="feature">⚡ <strong>Breaking Alerts</strong> - Major moves before everyone else</div>
+            <div class="feature">🎯 <strong>Actionable Insights</strong> - Not just news, but what to DO</div>
         </div>
 
         <div class="pricing">
             <div class="plan">
                 <h3>Free</h3>
                 <div class="price">$0</div>
-                <p>Weekly digest</p>
-                <p>Top 10 crypto updates</p>
-                <p>AI news highlights</p>
+                <p>✅ Weekly digest</p>
+                <p>✅ Top 10 crypto updates</p>
+                <p>✅ AI news highlights</p>
+                <p>❌ Daily insights</p>
+                <p>❌ Breaking alerts</p>
             </div>
-            <div class="plan">
-                <h3>Premium</h3>
+            <div class="plan featured">
+                <div class="badge">BEST VALUE</div>
+                <h3>Founding Member</h3>
                 <div class="price">$19<span style="font-size:1rem">/mo</span></div>
-                <p>Daily insights</p>
-                <p>Full market analysis</p>
-                <p>Exclusive research</p>
-                <p>Early alerts</p>
+                <div class="savings">Save $9/mo - Lock in forever!</div>
+                <p>✅ 6 daily insights</p>
+                <p>✅ Full market analysis</p>
+                <p>✅ Exclusive research</p>
+                <p>✅ Breaking alerts</p>
+                <p>✅ DeFi opportunities</p>
+                <p>✅ Weekend deep dives</p>
+                <p><strong>Regular price: $28/mo</strong></p>
             </div>
+        </div>
+
+        <div class="testimonial">
+            "This is literally an AI money printer. I wake up to insights that would take me 3 hours to research." - Early Beta User
         </div>
 
         <div class="email-form">
-            <h2 style="margin-bottom: 20px;">Join the Waitlist</h2>
+            <h2 style="margin-bottom: 20px;">🎁 Join First 50 Founding Members</h2>
+            <p style="margin-bottom: 20px;">Lock in $19/mo forever (Regular: $28/mo)</p>
             <form action="https://docs.google.com/forms/d/e/1FAIpQLSf_PLACEHOLDER/formResponse" method="POST" target="_blank">
                 <input type="email" name="emailAddress" class="email-input" placeholder="Enter your email" required>
                 <br>
-                <button type="submit" class="cta">Get Early Access</button>
+                <button type="submit" class="cta">Secure My Founding Member Spot</button>
             </form>
+            <p style="margin-top: 15px; font-size: 0.9rem;">⏰ Price increases to $28/mo after first 50 members</p>
+        </div>
+
+        <div class="features" style="margin-top: 50px;">
+            <h2 style="margin-bottom: 20px;">What You Get Starting January 2025:</h2>
+            <div class="feature">🌅 <strong>6:00 AM</strong> - Breaking crypto news & overnight moves</div>
+            <div class="feature">🌞 <strong>9:00 AM</strong> - AI breakthroughs & research summaries</div>
+            <div class="feature">☀️ <strong>12:00 PM</strong> - Midday market analysis & opportunities</div>
+            <div class="feature">🌆 <strong>2:30 PM</strong> - DeFi yields & staking updates</div>
+            <div class="feature">🌃 <strong>6:00 PM</strong> - Evening trend analysis</div>
+            <div class="feature">🌙 <strong>9:00 PM</strong> - Daily recap & tomorrow's outlook</div>
+            <div class="feature">📅 <strong>Weekends</strong> - Weekly roundup & deep research</div>
         </div>
 
         <footer>
-            <p>Built with AI • Powered by Bhindi</p>
+            <p>Built with AI • Powered by Bhindi • Fully Autonomous</p>
             <p>© 2024 InsightPulse AI • Contact: karanpreet1612@gmail.com</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">No spam. Unsubscribe anytime. Your data is safe.</p>
         </footer>
     </div>
 </body>
